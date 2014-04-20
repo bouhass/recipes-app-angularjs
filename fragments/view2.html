@@ -1,0 +1,10 @@
+<div>
+    <h2>View 2</h2>
+    Profile:
+    <input type="text" data-ng-model="filter.profile"/>
+    <ul>
+        <li data-ng-repeat="ingredient in ingredients | filter:filter.profile | orderBy:'profile'">
+            {{ ingredient.name | uppercase }} - {{ ingredient.profile }}
+        </li>
+    </ul>
+</div>

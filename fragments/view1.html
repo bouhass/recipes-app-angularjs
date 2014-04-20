@@ -1,0 +1,20 @@
+<div>
+    <h2>View 1</h2>
+    Name:
+    <input type="text" data-ng-model="filter.name"/>
+    <ul>
+        <li data-ng-repeat="ingredient in ingredients | filter:filter.name | orderBy:'profile'">
+            {{ ingredient.name | uppercase }} - {{ ingredient.profile }}
+        </li>
+    </ul>
+
+    Ingredient name:
+    <input type="text" data-ng-model="newIngredient.name"/>
+
+    Ingredient profile:
+    <input type="text" data-ng-model="newIngredient.profile"/>
+
+    <button data-ng-click="addIngredient()">Add ingredient</button>
+
+    <a href="#/view2">View 2</a>
+</div>
